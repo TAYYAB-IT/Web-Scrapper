@@ -4,7 +4,7 @@ const axios = require('axios')
 const cheerio=require('cheerio');
 const website="https://www.thenews.com.pk/";
 
-app.get('/news',async(req,res)=>{
+app.get('/',async(req,res)=>{
     axios.get(website).then(async result=>{
         const links=[];
         const $=await cheerio.load(result.data)
