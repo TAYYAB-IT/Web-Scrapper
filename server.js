@@ -23,5 +23,5 @@ app.get('/news',async(req,res)=>{
 })
 const port=process.env.PORT ||3000;
 app.listen(port,()=>{
-    console.log("Server is listening!")
+    console.log(`Server is listening at PORT ${port}!`)
 })
