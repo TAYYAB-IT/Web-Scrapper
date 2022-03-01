@@ -3,8 +3,8 @@ const app=express();
 const axios = require('axios')
 const cheerio=require('cheerio');
 const website="https://www.thenews.com.pk/";
-
-app.get('/',async(req,res)=>{
+app.get('/',(req,res)=>{req.send("Welcome TO Sportstory")})
+app.get('/news',async(req,res)=>{
     axios.get(website).then(async result=>{
         const links=[];
         const $=await cheerio.load(result.data)
